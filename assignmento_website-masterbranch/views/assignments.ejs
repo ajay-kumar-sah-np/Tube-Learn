@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <head>
+
+  
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Welcome to E-Assignmento</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- =======================================================
+  * Template Name: E-Assignmento - v2.2.1
+  * Template URL: https://bootstrapmade.com/E-Assignmento-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style >
+  	#comment_table tbody tr td{
+  		background-color:#fff;
+  		padding: 12px;
+
+
+  	}
+  		#comment_table tbody tr td:first-child{
+  		background-color:#edf1ee;
+  		margin-left:-15px;
+  		text-align: left;
+  		max-width: 60px;
+  		min-width: 30px;
+
+
+
+
+  	}
+  	#comment_table tbody tr td:first-child::before{
+  		content: ''
+  		
+
+
+  	}
+  	 .prof-1::after{
+        content:'  <%= name %>';
+        color:white;
+  
+   
+ 
+      }
+
+  		
+  </style>
+</head>
+
+ 
+  <body>
+
+  	<div class="container-fluid" >
+
+
+ <!-- ======= Header ======= -->
+  <%- include('./header.ejs') -%>
+  <!-- FORM SECTION START -->
+  <br><br> 
+
+<br><br>
+
+
+  	
+  	<div class="container" id="my_table" style="margin-top:50px">
+            
+  <table class="table table-hover table-bordered text-center">
+    <thead>
+      <tr>
+       
+        <th class="text-center">Chapter</th>
+        <th class="text-center">Topic</th>
+        <th class="text-center">Uploaded By</th>
+        
+         <th class="text-center">Link</th>
+         <th class="text-center">mark-down</th>
+      </tr>
+    </thead>
+
+  
+    <tbody id="tbody">
+
+
+
+ <% if (data.length >0){ 
+          data.forEach(function(row){ %>
+          <tr>
+            <td><%= row.chapter %></td>
+        <td><%= row.topic %></td>
+         <td><%=row.name %></td>
+          <td class="btn btn-link"><a href="<%= row.drive_link %>">Link</a></td>
+          <td><%=row.mark_down %></td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">No Record Found</td>
+                
+              </tr>
+            <% } %>
+
+     
+      <!-- <tr>
+        
+        <td>Conjuction</td>
+        <td>Aruvishal PATEL</td>
+         <td>Submitted</td>
+          <td class="btn btn-link">Link</td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+
+<br><br><br>
+  
+</div>
+<div>
+	<div style="margin:auto;max-width:400px;margin-bottom:80px">
+		
+		<h3>Add a comment here</h3>
+  <form id="post_comments" method="POST" action="/post_comments">
+      <div class="form-group" >
+        <textarea class="form-control status-box" rows="3" placeholder="Enter your comment here..." id="comments"></textarea>
+      </div>
+       <div class="button-group" style="text-align: center;" id="load_comments">
+      <!-- <p class="counter">250</p> -->
+      <button class="btn btn-primary" type="submit">Post</a>
+    </div>
+    </form>
+   
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" id="ajax_pre_loading" style="margin: auto;">
+  </div>
+
+	</div>
+	<h2 style="text-align: left;margin-left:34px;">Comments:-</h2>
+  
+<div id="comment_list" style="text-align: center;margin: auto;width:80vw">
+
+	 
+<table id="comment_table" style="margin: auto;border-spacing:60px" class="table table-hover  text-center">
+	
+	 <tbody style="margin: auto;padding:25px;">
+	 	
+	 	<% if (comments.length >0){ 
+        comments.forEach(function(row) { %>
+          <tr>
+            <td><h5><%= row.user_name %>:</h5><p style="font-style:italic"><%= row.time %></p></td>
+            <td><div style="display: flex;flex-direction: column;justify-content: space-around;">
+            	 </div><div><%= row.comments %></div>
+            	<!-- <div style="display: flex;flex-direction: row;justify-content: center;margin:40px">
+            		<div>Like</div> <div>comment</div>
+            	</div> -->
+           
+            	
+
+
+            </td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">No comments yet</td>
+                
+              </tr>
+            <% } %>
+	 </tbody>
+</table>
+</div>
+
+	 
+
+<script>
+ 
+  $( document ).ready(function() {
+   $('#ajax_pre_loading').hide();
+   //$('#ass-head').hide();
+   // $('#load_more').hide();
+  // SUBMIT FORM
+
+    $("#post_comments").submit(function(event) {
+    // Prevent the form from submitting via the browser.
+   // $('#ass-head').show();
+    event.preventDefault();
+    ajaxPost();
+  });
+    
+    
+    function ajaxPost(){
+      let urlString=window.location.href;
+      console.log(urlString);
+      let paramString = urlString.split('?')[1];
+let queryString = new URLSearchParams(paramString);
+  var link="";
+for (let pair of queryString.entries()) {
+    console.log("Key is: " + pair[0]);
+    console.log("Value is: " + pair[1]);
+    link=pair[1];
+}
+      var formData = {
+        comments: $("#comments").val(),
+        link_of_playlist:link
+       
+      }
+      
+      // DO POST
+      $.ajax({
+  method: 'POST',
+  contentType : "application/json",
+  url:'/post_comments',
+  data :JSON.stringify(formData),
+  dataType : 'json',
+  beforeSend: function() { $('#ajax_pre_loading').show(); },
+  success: function(res) {
+            $('#ajax_pre_loading').hide();
+            //$('#my_table').hide();
+          
+    var all_comments = res.data;
+    console.log(res);
+    var arr = [];
+if(all_comments.length>0)
+{
+  
+all_comments.forEach(function(all_comments) {
+      var tr = $('<tr/>');
+      tr.append($('<td/>').html('<h5>'+all_comments.user_name+'</h5>'+all_comments.time));//all_comments.name
+      tr.append($('<td/>').html( all_comments.comments ));
+   //   tr.append($('<td/>').html('reply <br> like'));
+     //    tr.append($('<td/>').html('<a href="'+assignment.drive_link+'">Link</a>'));
+    
+      arr.push(tr);
+    });
+var body=[];
+for(var i=arr.length;i>=0;i--)
+{
+body.push(arr[i]);
+}
+//Object.keys(body).reverse();
+//$('table.assignment-table').find('tbody')
+$('#comment_table').find('tbody').html(body);
+  //$('#load_more_link').attr('href','/find_all_pdfs?link='+formData.link);
+ //  $('#load_more').show();
+
+ 
+}
+ else
+ {
+   $('#comment_list').html("no comment yet");
+ }   
+
+   
+  }
+})
+      
+      // Reset FormData after Posting
+      resetData();
+ 
+    }
+    
+    function resetData(){
+    //  $("#link").val("");
+      
+    }
+})
+</script>
+</script>
+<script >
+  var $select1 = $( '#select1' ),
+    $select2 = $( '#select2' ),
+    $options = $select2.find( 'option' );
+    
+$select1.on( 'change', function() {
+  $select2.html( $options.filter( '[value="' + this.value + '"]' ) );
+} ).trigger( 'change' );
+</script>
+
+
+
+<!-- ======= Footer ======= -->
+ <%- include('footer')-%>
+  </body>
+  </html>

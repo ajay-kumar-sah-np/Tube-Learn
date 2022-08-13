@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Welcome To TubeLearn  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    
+   
+
+
+
+/*load more css*/
+
+.stage {
+padding:40px;
+text-align:center;}
+.stage>a {
+  line-height:1em;
+  letter-spacing:0.06em;
+  font-family: 'Lato', sans-serif;
+  font-weight:normal;
+  font-size:16px;
+  text-decoration:none;
+  color:#fff;
+  background:#71c55d;
+  display:inline-block;
+  padding:15px 12px 15px 15px;
+  transition:background 200ms;
+  border-radius:4px;
+}
+.stage>a:hover {
+  background:#cea052;
+}
+.stage>a:after {
+  font-family: 'FontAwesome', sans-serif;
+  font-weight:300;
+  content: "\f105";
+  margin-left:20px;
+  color:#fff;
+  font-size:18px;
+  vertical-align:middle;
+  transition:color 200ms;
+}
+
+a:hover:after {
+  color:#fff;
+}
+
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    bottom: -15px;
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+.google {
+    background-color:red;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    bottom: -15px;
+}
+
+
+
+
+ .prof-1::after{
+        content:'  <%= name %>';
+        color:white;
+  
+   
+ 
+      }
+
+
+
+
+
+  </style>
+  
+</head>
+
+<body>
+
+
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="/"><span></span>TubeLearn</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu" style="margin-right:100px">
+         <!--  <li  class="prof-1"><a href="index.html"></a></li> -->
+         <li class="prof-1"><a><img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" width="35px" height="35px" style="border-radius:50px;background-color: grey;z-index: 9" /></a></li>
+          <li><a href="#about-us">explore</a></li>
+          <li><a href="#contests">contest</a></li>
+        <!--   <li><a href="#screenshots">Gallery</a></li> -->
+         <!--  <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li> -->
+         <!--  <li class="menu-has-children"><a href="">Special Links</a>
+            <ul>
+              <li><a href="#">Find Your College Metarial</a></li>
+             
+            </ul>
+          </li>
+          <li><a href="#blog">New Posts</a></li> -->
+          <li class="logout_nav text-center" style="padding: 2px;background-color: grey">
+
+<%  if(name==""){ %>
+         <p data-toggle="modal" data-target="#myModal" style="color: white ;font-weight:700">Please Login </p>
+
+         <% } else{ %>
+         <a href="/logout ">Logout</a>
+<% } %>
+
+        </li>
+         <!--  <li><a href="#contact">Contact</a></li> -->
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+
+    </div>
+     <!-- <li class="profile_link"><img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" width="35px" height="35px" style="border-radius:50px;background-color: grey;z-index: 9" /></a></li> -->
+     <li class="profile_link">
+      <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#myModal">
+    <%  if(name=="") { %>
+  Please Login  
+   <% }else {
+   %>
+  <%= name %>
+  
+  
+   
+ <%} %>
+  </button>
+
+ 
+     
+       <!-- <%  if(name!="") { %>
+<a class="btn btn-danger" href="/logout">Logout</a>
+<%} %> </li> -->
+   <!--  <li class="notification bell-icon" style="cursor:pointer;" ><img src="https://img.icons8.com/android/24/000000/appointment-reminders.png"/> <span style="color:#e91e63;font-size:25px;font-weight:800;margin-left:-18px">1</span></li> -->
+     
+  </header><!-- End Header -->
+
+
+
+
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Welcome to TubeLearn</h1>
+      <h2>Dedicated To Online Learning</h2>
+
+
+      <!-- code for alert starts -->
+<% if(message!="") {
+  %>
+  <div class="alert alert-success alert-dismissible" style="width: 70vw">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+     <strong></strong><%= message %>
+  </div>
+
+<%}%>
+
+<!-- code for elert ends -->
+
+
+
+
+
+      <!-- <img src="assets/img/main-img.jpg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100"> -->
+      <a href="#get-started" class="btn-get-started scrollto">Get Assignment</a>
+     <!--  <div class="btns">
+        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
+      </div> -->
+
+      <!-- <div style="width:300px"  class="d-flex flex-row justify-content-around" > -->
+         <!-- <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">
+    Login
+  </button>  -->
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    <%  if(name=="") { %>
+  Please Login  
+   <% }else {
+   %>
+  <%= name %>
+  
+  
+   
+ <%} %>
+  </button>
+
+ 
+      </div>
+      <br>
+       <%  if(name!="") { %>
+<a class="btn btn-danger" href="/logout">Logout</a>
+<%} %>
+    </div> -->
+  </section> <!-- End Hero Section -->
+
+  
+<div id="all_notifications"></div>
+
+
+
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h3>Enhancing Skills for Better Future</h3>
+          <p class="separator">absolutely free of cost</p>
+
+        </div>
+      </div>
+
+
+      <br><br>
+  <div class="container" style="border:none;height:auto;box-shadow:2px 2px 2px 2px grey">
+     <h3 style="color:green;text-decoration: underline;">Find Your Assignment </h3>
+     <br>
+
+
+
+
+<!-- The form -->
+<form class="example text-center" action="/find_pdfs" method="POST" id="pdf_search" enctype="application/json">
+  <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: center;">
+     <input type="text" placeholder="Paste Link of playlist" name="search_key" style="font-size:19px;border-radius:4px;" id="link">
+  <button type="submit" style="font-size:19px"><i class="fa fa-search"></i></button>
+  </div>
+ 
+</form>
+
+<br>
+<div class="container" id="my_table" >
+            
+  <table class="table">
+   
+
+  
+    <tbody>
+
+
+      
+      <tr>
+        
+        <td style="text-align: left;"> 1. Just go to yutube and copy the link of video</td>
+       
+      </tr>
+      <tr>
+        <td style="text-align: left;">
+          2. paste the link in above search box 
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: left;">
+          3. click on seach icon
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </div>
+
+</div>
+
+<br><br>
+
+
+<!-- show pdfs using ajax  starts-->
+
+<div class="container" id="my_table" style="margin-top:10px">
+    <table class="table table-hover table-bordered assignment-table">
+    <thead id="ass-head">
+      <tr style="text-align:center;">
+        <th style="text-align:center;">Chapter</th>
+        <th style="text-align:center;">Topic</th>
+        <th style="text-align:center;">Uploaded By</th>
+       
+         <th style="text-align:center;">Link</th>
+      </tr>
+    </thead>
+
+  
+    <tbody id="tbody">
+
+
+
+ 
+    </tbody>
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" id="ajax_pre_loading">;
+  </table>
+</div>
+
+
+<div class="stage"  id="load_more">
+<a href="#" id="load_more_link">Assignment Section</a>
+</div>
+   
+<!-- show pdfs using ajax  ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us padd-section">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+          <div class="col-md-5 col-lg-3" style="border: 4px solid grey;">
+            <img src="assets/img/assignment.jpg" alt="About" data-aos="zoom-in" data-aos-delay="100" height="300px" width="310px">
+          </div>
+
+          <div class="col-md-7 col-lg-5">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+
+              <h3 style="color:#71c55d">Stay Tuned With Us</h4>
+              <p>No coaching No Money Wasting 
+              </p>
+
+              <ul class="list-unstyled">
+                <li><i class="fa fa-angle-right"></i>Do Assignments</li>
+                <li><i class="fa fa-angle-right"></i>Give Tests</li>
+                <li><i class="fa fa-angle-right"></i>Identify Your Weak Points</li>
+               <!--  <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+                <li><i class="fa fa-angle-right"></i>Unlimited Features</li> -->
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="contests" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h3>Get Ready guys</h3>
+          <p class="separator"></p>
+        </div>
+
+        <div class="d-flex flex-row flex-wrap justify-content-around" data-aos="fade-up" data-aos-delay="100" >
+
+  
+
+          <div class="col-md-6 col-lg-3" style="border: 1px solid black;padding:24px;margin:12px;">
+             <h2 class="text-center">DBMS basic contest (div2)</h2>
+             <h6 class="text-center">Join In 6 Days</h6>
+             <h6 class="text-center">8:30 PM ,8/12/2022</h6>
+           <div class="btn btn-danger text-center">Register</div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3" style="border: 1px solid black;padding:24px; margin:12px;">
+
+             <h2 class="text-center">Networking contest (div2)</h2>
+             <h6 class="text-center">Join In 8 Days</h6>
+              <h6 class="text-center">8:30 PM ,9/12/2022</h6>
+
+             
+           <div class="btn btn-danger text-center">Register</div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-3" style="border: 1px solid black;padding:24px;margin: 12px;">
+
+             <h2 class="text-center">Operating System contest (div2)</h2>
+             <h6 class="text-center">Join In 3 Days</h6>
+              <h6 class="text-center">8:30 PM ,11/12/2022</h6>
+
+          
+           <div class="btn btn-danger text-center">Register</div>
+          </div>
+
+
+       
+
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+
+
+
+
+
+<!-- contest timers section start -->
+
+
+<!-- ======= Features Section ======= -->
+    <section id="features" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h3>Amazing Features.</h3>
+          <p class="separator"></p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/paint-palette.svg" alt="img" class="img-fluid">
+              <h4>Practice assignment</h4>
+              <p>Watch a video of your favourite teacher and solve an assignment based on that what you have learned</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/vector.svg" alt="img" class="img-fluid">
+              <h4>Past Year Papers</h4>
+              <p>here you can find past year papers of your college</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/design-tool.svg" alt="img" class="img-fluid">
+              <h4>Upload New Assignments</h4>
+              <p>You can upload your own made assignments</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/asteroid.svg" alt="img" class="img-fluid">
+              <h4>Website is free </h4>
+              <p> we earn a lot by advertisement ,,,so that we may come true acroos your expectations</p>
+            </div>
+          </div>
+
+       
+
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+
+
+
+
+
+
+
+<!-- contest timer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ======= Screenshots Section ======= -->
+    <section id="screenshots" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h3> Gallery</h3>
+          <p class="separator"></p>
+        </div>
+
+        <div class="owl-carousel owl-theme" data-aos="fade-up" data-aos-delay="100">
+
+          <div><img src="assets/img/gallery1.jpg" alt="img"></div>
+         <!--  <div><img src="assets/img/gallery2.jpg" alt="img"></div> -->
+          <div><img src="assets/img/gallery3.jpg" alt="img"></div>
+          <div><img src="assets/img/gallery4.jpg" alt="img"></div>
+          <div><img src="assets/img/gallery5.jpg" alt="img"></div>
+          <div><img src="assets/img/gallery6.jpg" alt="img"></div>
+          <!-- <div><img src="assets/img/gallery7.jpg" alt="img"></div> -->
+         <!--  <div><img src="assets/img/gallery8.jpg" alt="img"></div> -->
+          <!-- <div><img src="assets/img/screen/9.jpg" alt="img"></div> -->
+
+        </div>
+      </div>
+
+    </section><!-- End Screenshots Section -->
+
+   
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="padd-section text-center">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+          <div class="col-md-8">
+
+            <div class="testimonials-content">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="carousel-item  active">
+                    <div class="top-top">
+
+                      <h2>Our User's Speech</h2>
+                      <p>For a student,who is unable to pay fee at coaching institute ,,this site is best for them</p>
+                      <h4>Shubham Sanoria<span>Student</span></h4>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h2>Our User's Speech</h2>
+                      <p>amazing website ,new experience in yutube learning.</p>
+                      <h4>shashank<span>medical student</span></h4>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h3>Our User's Speech</h3>
+                      <p>I cleared SSC-CGL exam only from doing assignments from this website.</p>
+                      <h4>Rohit kumar<span>govt employee</span></h4>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="btm-btm">
+
+                  <ul class="list-unstyled carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ul>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="padd-section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h3>Mail Us Your Suggesstion</h3>
+          <p class="separator">Give Some Sugesstion So that we Come with Better user experience</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="address"> </i><p> Noida</p>
+              </div>
+
+              <div class="email">
+                <i class="fa fa-envelope"></i>
+                <p>TubeLearn@gmail.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 7237046763</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+             <!--  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> -->
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <!-- <form action="mailto: kshitijpatel917050@gmail.com" method="post" role="form" class="php-email-form" name=”EmailForm” enctype=”multipart/form-data”> -->
+                <form action="/send_mail" method="post">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+               <!--  <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div> -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"  />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="msg" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                 
+                </div>
+                <!-- <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div> -->
+                <div class="text-center"><button type="submit" style="background-color: lightgreen;padding:3px;outline: none;">Send Email</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">E-TubeLearn</a>
+            <p>Hopefully ,it will come with a new edge in education industry.</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Quick Links</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="/contribute">Contribute</a></li>
+              <li><a href="/article_editor">write an article</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Support</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">faq</a></li>
+              <li><a href="#">Editor help</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>Abou Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Features item</a></li>
+              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights TubeLearn. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TubeLearn
+        -->
+         <!--  Designed by <a href="https://bootstrapmade.com/">E-</a> -->
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+
+<!-- login html starts -->
+
+<!-- if alredy logged in model starts -->
+<!-- The Modal -->
+<% if(name!="")
+{ %>
+
+  <div class="modal fade mymodel" id="myModal" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-transform: none;">Not Recommended To Logout</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+
+<div class="modal-body "><a class="btn btn-danger text-center" href="/logout">Logout</a></div>
+
+
+
+      
+      </div>
+    </div>
+  </div>
+<!-- logged in model  ends -->
+<% } else { %>
+  <!-- The Modal if not logged in -->
+  <div class="modal fade mymodel" id="myModal" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <form method="POST" class="form-vertical" action="/user_login">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10" >
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+  </div>
+
+  <div class="form-group" style="margin-top: 6px">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" style="margin-top: 5px">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-success" style="margin-top:5px;">Login</button>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+        <!-- Modal footer -->
+        <!--  -->
+         <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content:space-around;">
+                   <!--  <div class="facebook text-center mr-3">
+                            <div class="fa fa-facebook"></div>
+                        </div> -->
+                        <div class="google text-center mr-3">
+                           <a href="/auth/google"><div class="fa fa-google"></div></a> 
+                        </div>
+                         <div class="modal-footer">
+          New User? 
+          <a type="button" class="btn btn-success" href="/sign-up">Sign-Up</a>
+        </div>
+                  </div>
+        <!-- model footer ends -->
+        
+      </div>
+    </div>
+  </div>
+
+<% } %>
+<!-- login ends -->
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/modal-video/js/modal-video.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<!-- script for ajax -->
+<!-- <script src="assets/js/show_notifications.js"></script> -->
+
+<script>
+  $( document ).ready(function() {
+   $('#ajax_pre_loading').hide();
+   $('#ass-head').hide();
+    $('#load_more').hide();
+  // SUBMIT FORM
+
+    $("#pdf_search").submit(function(event) {
+    // Prevent the form from submitting via the browser.
+    $('#ass-head').show();
+    event.preventDefault();
+    ajaxPost();
+  });
+    
+    
+    function ajaxPost(){
+      
+      // PREPARE FORM DATA
+      var formData = {
+        link : $("#link").val()
+       
+      }
+      
+      // DO POST
+      $.ajax({
+  method: 'POST',
+  contentType : "application/json",
+  url:'/find_pdfs',
+  data :JSON.stringify(formData),
+  dataType : 'json',
+  beforeSend: function() { $('#ajax_pre_loading').show(); },
+  success: function(res) {
+            $('#ajax_pre_loading').hide();
+            $('#my_table').hide();
+          
+    var assignments = res.data;
+    var body = [];
+if(assignments.length>0)
+{
+  
+assignments.forEach(function(assignment) {
+      var tr = $('<tr/>');
+      tr.append($('<td/>').html(assignment.chapter));
+      tr.append($('<td/>').html( assignment.topic ));
+       tr.append($('<td/>').html( assignment.name));
+         tr.append($('<td/>').html('<a href="'+assignment.drive_link+'">Link</a>'));
+    
+      body.push(tr);
+    });
+ $('table.assignment-table').find('tbody').html(body);
+  $('#load_more_link').attr('href','/find_all_pdfs?link='+formData.link);
+   $('#load_more').show();
+
+ 
+}
+ else
+ {
+$('table.assignment-table').find('tbody').html('no record found '+'<a href="/contribute"> contribute </a>');
+ }   
+
+   
+  }
+})
+      
+      // Reset FormData after Posting
+      resetData();
+ 
+    }
+    
+    function resetData(){
+      $("#link").val("");
+      
+    }
+})
+</script>
+</body>
+
+</html>
